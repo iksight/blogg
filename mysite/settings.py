@@ -25,12 +25,7 @@ SECRET_KEY = 'uu-s9t21wz!#=@ri7rl7s26uctmgia9yak&as%(+id2t%s28j^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
 ALLOWED_HOSTS = ["keptop.pythonanywhere.com"]
-=======
-ALLOWED_HOSTS = []
->>>>>>> 72cfcc7da2b14331a6772ab49903e13d4f6b7d37
-
 
 # Application definition
 
