@@ -9,7 +9,13 @@
         </div>
         <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
         <p>{{ post.text|linebreaksbr }}</p>
+        {% if post.approved_comments.count %}
+          <a href="{% url 'post_detail' pk=post.pk %}">Комментариев: {{ post.approved_comments.count }}</a>
+        {% endif %}
       </div>
+      {% if not forloop.last%}
+        <hr>
+      {% endif %}
     {% endif %}
   {% endfor %}
 {% endblock %}
