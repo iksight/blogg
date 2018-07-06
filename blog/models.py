@@ -1,5 +1,6 @@
 from django.db import models
 from django.utils import timezone
+from django.utils.translation import ugettext_lazy as _
 
 
 class Post(models.Model):
@@ -12,6 +13,9 @@ class Post(models.Model):
     def publish(self):
         self.published_date = timezone.now()
         self.save()
+
+    def approved_comments(self):
+        return self.comments.filter(approved_comment=True).count()
 
     def __str__(self):
         return self.title

@@ -28,9 +28,6 @@ def add_comment_to_post(request, pk):
         form = CommentForm()
     return render(request, 'blog/add_comment_to_post.html', {'form': form})
 
-def approved_comments(self):
-    return self.comments.filter(approved_comment=True)
-
 @login_required
 def post_new(request):
     if request.method == "POST":
