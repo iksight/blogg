@@ -25,6 +25,8 @@ SECRET_KEY = 'uu-s9t21wz!#=@ri7rl7s26uctmgia9yak&as%(+id2t%s28j^'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+LOGIN_REDIRECT_URL = '/'
+
 ALLOWED_HOSTS = [
     "127.0.0.1",
     "keptop.pythonanywhere.com"
